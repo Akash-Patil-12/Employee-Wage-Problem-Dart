@@ -1,3 +1,6 @@
+import 'Employee.dart';
+
 void main() {
-  print('Welcome to Employee Wage Problem');
+  var employee = Employee();
+  employee.checkEmployee();
 }
