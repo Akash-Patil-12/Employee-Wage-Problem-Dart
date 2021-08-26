@@ -6,30 +6,29 @@ class Employee {
   final int min = 0, max = 3, wagePerHours = 20;
 
   void employeeWage() {
-    result = min + random.nextInt(max - min);
-    switch (result) {
-      case 0:
-        {
-          print('Employee is present');
-          totalEmpWage = wagePerHours * 8;
-        }
-        break;
-      case 1:
-        {
-          print('Employee is half day present');
-          totalEmpWage = wagePerHours * 4;
-        }
-        break;
-      case 2:
-        {
-          print('Employee is absent');
-          totalEmpWage = wagePerHours * 0;
-        }
-        break;
-      default:
-        {
-          print('Not a right choice');
-        }
+    for (int day = 1; day <= 20; day++) {
+      result = min + random.nextInt(max - min);
+      switch (result) {
+        case 0:
+          {
+            totalEmpWage += wagePerHours * 8;
+          }
+          break;
+        case 1:
+          {
+            totalEmpWage += wagePerHours * 4;
+          }
+          break;
+        case 2:
+          {
+            totalEmpWage += wagePerHours * 0;
+          }
+          break;
+        default:
+          {
+            print('Not a right choice');
+          }
+      }
     }
     print('Total employee wage is : $totalEmpWage');
   }
